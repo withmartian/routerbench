@@ -26,7 +26,7 @@ def get_completion_token_cost(model_name: str) -> float:
 def get_tokens_for_response(response: Union[str, list[str]], model_name) -> int:
     if isinstance(response, str):
         if response[0] == "[" and response[-1] == "]":
-            response = ast.literal_eval(response)
+            response = str(ast.literal_eval(response))
     elif not isinstance(response, list):
         response = str(response)  # want responses to be strings
     return count_string_tokens(response, model_name)
