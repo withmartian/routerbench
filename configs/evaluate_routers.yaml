@@ -1,0 +1,32 @@
+data_path: routerbench_5shot.pkl
+train_fraction: 0.7
+willingness_to_pay: true
+local: true
+wanted_eval_name: ["grade-school-math", "hellaswag", "mmlu", "arc-challenge", "mbpp", "winogrande", "mtbench"]
+out_of_distribution: false
+gcp_token: <path to GCP token>
+data_name: routerbench
+embedding_models: ["all-MiniLM-L12-v2",]
+local_cache: true
+knn:
+  neighbors: [5, 10, 40]
+  metrics: ["cosine",]
+mlp:
+  hidden_layer_sizes: [100, [100, 100]]
+  activation: ["relu",]
+  learning_rates: [0.001,]
+cascading_router:
+  max_cost_per_response_list: [
+                    0.001,
+                    0.005,
+                    0.01,
+                    0.05,
+                    0.1,
+                    0.5,
+                    1.0,
+                    5.0,
+                    10.0,
+                    50,
+                    100,
+                ]
+  error_rates: [0, 0.01, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8]

@@ -1,0 +1,5 @@
+data_path: routerbench_raw.pkl
+input_format: openai
+data_name: routerbench
+embedding_models: ["all-MiniLM-L12-v2",]
+local_cache: true
