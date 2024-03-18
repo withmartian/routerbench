@@ -1,0 +1,4 @@
+input_file: data/routerbench/eval_results/eval_results__03-03-18__routerbench.pkl
+data_path: routerbench_raw.pkl
+wanted_eval_names: null
+data_name: routerbench
