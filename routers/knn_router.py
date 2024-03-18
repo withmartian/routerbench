@@ -71,7 +71,6 @@ class KNNRouter(AbstractRouter):
         prompt_embeddings = self.cache.batch_get_embedding(
             tuple(prompts), self.embedding_model
         )
-        print(prompt_embeddings.shape)
         if len(prompt_embeddings.shape) == 1:
             prompt_embeddings = np.vstack(prompt_embeddings)
         performance_scores = self.calc_performance_scores(prompt_embeddings)
