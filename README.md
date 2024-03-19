@@ -1,5 +1,7 @@
 # RouterBench
 
+### [Paper](https://arxiv.org/abs/2403.12031) | [Dataset](https://huggingface.co/datasets/withmartian/routerbench)
+
 The code for the paper ROUTERBENCH: A Benchmark for Multi-LLM Routing System
 
 ## Setup process
@@ -53,5 +55,11 @@ modal deploy modal_router.py
 
 ## Citation
 If you use this code, please cite the following paper:
-```
+```bibtex
+@article{hu2024routerbench,
+  title   = {ROUTERBENCH: A Benchmark for Multi-LLM Routing System},
+  author  = {Qitian Jason Hu and Jacob Bieker and Xiuyu Li and Nan Jiang and Benjamin Keigwin and Gaurav Ranganath and Kurt Keutzer and Shriyash Kaustubh Upadhyay},
+  year    = {2024},
+  journal = {arXiv preprint arXiv: 2403.12031}
+}
 ```
